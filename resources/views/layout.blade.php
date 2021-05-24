@@ -12,20 +12,12 @@
 
 </head>
 <body>
-
     <div class="container">
         <div class="container-fluid py-5" style="background-color: #e9ecef; margin-top: 1rem; margin-bottom: 1rem; border-radius: 0.5rem;">
-            <h1>Séries</h1>
+            <h1>@yield('cabecalho')</h1>
         </div>
 
-        <a href="#" class="btn btn-dark mb-2">Adicionar</a>
-
-        <ul class="list-group">
-            <?php foreach ($series as $serie): ?>
-                <li class="list-group-item"> <?= $serie; ?> </li>
-            <?php endforeach; ?>
-        </ul>
+        @yield('conteudo')
     </div>
-
 </body>
 </html>
