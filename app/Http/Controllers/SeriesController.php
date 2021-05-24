@@ -15,18 +15,11 @@ class SeriesController extends Controller
 {
     public function index (Request $request){
         $series = [
+            'Brookly nine nine',
             'Marvel',
-            'Lost',
-            'Brookly nine nine'
+            'Lost'
         ];
 
-        $html = "<ul>";
-        foreach ($series as $serie) {
-            $html .= "<li>$serie</li>";
-        }
-
-        $html .= "</ul>";
-
-        return $html;
+        return view('series.index', compact('series'));
     }
 }
